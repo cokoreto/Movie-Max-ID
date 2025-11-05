@@ -28,11 +28,9 @@ class ProfileController extends Controller
         $user->username = $request->username;
 
         if ($request->hasFile('photo')) {
-            // Hapus file lama jika ada
             if ($user->photo && Storage::disk('public')->exists($user->photo)) {
                 Storage::disk('public')->delete($user->photo);
             }
-            // Simpan file baru
             $user->photo = $request->file('photo')->store('profile', 'public');
         }
 
@@ -41,6 +39,8 @@ class ProfileController extends Controller
         }
 
         $user->save();
+
+        session(['username' => $user->username]);
 
         return redirect('/profile')->with('success', 'Profile berhasil diupdate!');
     }

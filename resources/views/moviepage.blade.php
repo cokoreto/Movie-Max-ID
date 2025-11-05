@@ -579,7 +579,7 @@
     <section id="popularmovie" class="popular-movies">
         <h2>Popular <span>Movie</span></h2>
         <div class="movies-grid">
-            <a href="../Movie_stream/wolverine.html" class="movie-link">
+            <a href="/wolverine" class="movie-link">
                 <div class="movie">
                     <img src="/img/g1.jpg" alt="Movie 1" />
                     <h3>The Wolverine</h3>
@@ -587,7 +587,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/harry_potter.html" class="movie-link">
+            <a href="/harry_potter" class="movie-link">
                 <div class="movie">
                     <img src="/img/g2.jpg" alt="Movie 2" />
                     <h3>Harry Potter and the Deathly Hallows</h3>
@@ -595,7 +595,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/loki.html" class="movie-link">
+            <a href="/loki" class="movie-link">
                 <div class="movie">
                     <img src="/img/g3.jpg" alt="Movie 3" />
                     <h3>Loki</h3>
@@ -603,7 +603,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/deadpool.html" class="movie-link">
+            <a href="/deadpool" class="movie-link">
                 <div class="movie">
                     <img src="/img/g4.jpg" alt="Movie 3" />
                     <h3>Deadpool</h3>
@@ -611,7 +611,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/iron_man.html" class="movie-link">
+            <a href="/iron_man" class="movie-link">
                 <div class="movie">
                     <img src="/img/g5.jpg" alt="Movie 3" />
                     <h3>Iron-man</h3>
@@ -619,7 +619,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/john_wick.html" class="movie-link">
+            <a href="/john_wick" class="movie-link">
                 <div class="movie">
                     <img src="/img/g6.jpg" alt="Movie 3" />
                     <h3>John Wick: Chapter 4</h3>
@@ -627,7 +627,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/world_war_z.html" class="movie-link">
+            <a href="/world_war_z" class="movie-link">
                 <div class="movie">
                     <img src="/img/g7.jpg" alt="Movie 3" />
                     <h3>World War Z</h3>
@@ -635,7 +635,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/captain_america.html" class="movie-link">
+            <a href="/captain_america" class="movie-link">
                 <div class="movie">
                     <img src="/img/g8.jpg" alt="Movie 3" />
                     <h3>Captain America: The First Avenger</h3>
@@ -643,7 +643,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/bumblebee.html" class="movie-link">
+            <a href="/bumblebee" class="movie-link">
                 <div class="movie">
                     <img src="/img/g9.jpg" alt="Bumblebee" />
                     <h3>Bumblebee</h3>
@@ -651,7 +651,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/doctor-strange.html" class="movie-link">
+            <a href="/doctor_strange" class="movie-link">
                 <div class="movie">
                     <img src="/img/g13.jpg" alt="Doctor Strange" />
                     <h3>Doctor Strange</h3>
@@ -667,7 +667,7 @@
                 </div>
             </a>
 
-            <a href="../Movie_stream/deadpoolxwolfreen.html" class="movie-link">
+            <a href="/deadpoolxwolverine" class="movie-link">
                 <div class="movie">
                     <img src="/img/deadpolxwolfren.jpg" alt="Movie 3" />
                     <h3>Deadpool X Wolverine</h3>

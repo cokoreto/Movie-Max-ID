@@ -20,12 +20,12 @@
     <!-- Navbar start -->
     <nav class="navbar">
         <!-- Logo -->
-        <a href="" class="navbar-logo">Movie<span>Max</span> ID</a>
+        <a href="/moviepage" class="navbar-logo">Movie<span>Max</span> ID</a>
 
-        <!-- Menu -->
+        {{-- <!-- Menu -->
         <div class="navbar-nav">
             <a href="/moviepage">Home</a>
-        </div>
+        </div> --}}
 
         <!-- extra -->
         <div class="navbar-extra">
