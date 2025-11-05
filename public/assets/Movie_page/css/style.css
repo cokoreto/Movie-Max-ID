@@ -527,12 +527,16 @@ body {
 .upcoming-movies h2 span {
   color: var(--primary);
 }
+
 .upcoming-movies .movies-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  /* ubah dari flex ke grid supaya kontrol lebar lebih mudah */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* ubah 260px sesuai lebar minimal poster yang diinginkan */
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
 }
+
 .upcoming-movies .movie {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -540,14 +544,18 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  width: 21%;
+  width: 100%;        /* biarkan grid yang mengatur lebar */
+  max-width: 360px;   /* optional: batasi maksimum */
 }
+
 .upcoming-movies .movie:hover {
   transform: translateY(-10px);
 }
 .upcoming-movies .movie img {
   width: 100%;
-  height: 450px;
+  height: auto;
+  /* pakai aspect-ratio agar tinggi mengikuti lebar poster (mis. poster 2:3) */
+  aspect-ratio: 2 / 3;
   object-fit: cover;
 }
 .upcoming-movies .movie h3 {

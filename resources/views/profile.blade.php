@@ -1,4 +1,3 @@
-<!-- filepath: c:\laragon\www\Movie-Max-ID\resources\views\profile.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +23,19 @@
         <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <!-- Foto Profile -->
-            <div>
-                <label>Foto Profile:</label>
-                <input type="file" name="photo">
+            <div style="text-align:center; margin-bottom:18px; position:relative;">
                 @php
                     $user = \App\Models\Signup::find(session('user_id'));
                     $profilePhoto = ($user && $user->photo) ? asset('storage/' . $user->photo) : asset('/img/avatar.png');
                 @endphp
-                <img src="{{ $profilePhoto }}" alt="Profile" class="profile-photo">
+
+                <!-- foto dibungkus wrapper, tambahkan span.icon untuk pensil -->
+                <label for="photoInput" class="photo-wrapper" style="cursor:pointer; display:inline-block;">
+                    <img src="{{ $profilePhoto }}" alt="Profile" class="profile-photo" id="profilePhotoPreview" title="Klik untuk mengganti foto">
+                    <span class="edit-icon" aria-hidden="true">✎</span>
+                </label>
+
+                <input type="file" name="photo" id="photoInput" style="display:none;" accept="image/*">
             </div>
             <!-- Username -->
             <div>
@@ -49,13 +53,11 @@
     </div>
     <!-- Footer start-->
     <footer>
-        <div class="links">
-            <a href="/">Home</a>
-        </div>
         <div class="credit">
-            <p>Movie <a href="">Max</a> Indonesia | &copy; 2024.</p>
+            <p>Movie Max Indonesia | &copy; 2024.</p>
         </div>
     </footer>
     <!-- Footer end-->
 </body>
 </html>
+

@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var photoInput = document.getElementById('photoInput');
+    var profilePhoto = document.getElementById('profilePhotoPreview');
+    if (profilePhoto && photoInput) {
+        profilePhoto.addEventListener('click', function () {
+            photoInput.click();
+        });
+    }
+});

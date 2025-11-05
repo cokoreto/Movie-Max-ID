@@ -683,24 +683,22 @@
         <h2>Upcoming <span>Movie</span></h2>
         <div class="movies-grid">
             <div class="movie">
-                <a href="/Movie_stream/deadpoolxwolfreen.html">
-                    <img src="/img/g10.jpg" alt="Upcoming Movie 1" />
-                </a>
-                <h3>Deadpool & Wolverine</h3>
-                <p>Release Date: July 26, 2024</p>
-                <div class="countdown" data-release-date="2024-07-26"></div>
+                <a href="https://www.imdb.com/title/tt4712810/?ref_=ext_shr_lnk"><img src="/img/g10.png" alt="Upcoming Movie 1" /></a>
+                <h3>Now You See Me : Now You Don't</h3>
+                <p>Release Date: November 14, 2025</p>
+                <div class="countdown" data-release-date="2025-11-14"></div>
             </div>
             <div class="movie">
-                <a href="#"><img src="/img/g11.jpg" alt="Upcoming Movie 2" /></a>
-                <h3>Venom: The Last Dance</h3>
-                <p>Release Date: Oktober 15, 2024</p>
-                <div class="countdown" data-release-date="2024-10-25"></div>
+                <a href="https://www.imdb.com/title/tt26443597/?ref_=ext_shr_lnk"><img src="/img/g11.png" alt="Upcoming Movie 2" /></a>
+                <h3>ZooTopia 2</h3>
+                <p>Release Date: November 26, 2025</p>
+                <div class="countdown" data-release-date="2025-11-26"></div>
             </div>
             <div class="movie">
-                <a href="#"><img src="/img/g12.jpg" alt="Upcoming Movie 3" /></a>
-                <h3>Kraken: The Hunter</h3>
-                <p>Release Date: Desember 13, 2024</p>
-                <div class="countdown" data-release-date="2024-12-13"></div>
+                <a href="https://www.imdb.com/title/tt22084616/?ref_=mv_close"><img src="/img/g12.png" alt="Upcoming Movie 3" /></a>
+                <h3>Spider-Man: Brand New Day</h3>
+                <p>Release Date: July 31, 2026</p>
+                <div class="countdown" data-release-date="2026-07-31"></div>
             </div>
         </div>
     </section>
