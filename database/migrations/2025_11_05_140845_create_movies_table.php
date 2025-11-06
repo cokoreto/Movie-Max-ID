@@ -11,7 +11,6 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
-            $table->integer('release_year');
             $table->float('rating_avg')->default(0);
             $table->string('poster')->nullable();
             $table->timestamps();
