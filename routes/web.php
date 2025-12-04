@@ -21,6 +21,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/librarymovie', function () {
+    return view('librarymovie/librarymovie');
+});
+
 // login authenticate
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 // logout

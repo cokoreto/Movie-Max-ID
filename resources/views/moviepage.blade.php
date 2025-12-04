@@ -43,22 +43,22 @@
             </div>
 
             @if (session('username'))
-                <div class="auth-container">
-                    <a href="/profile">
-                        @php
-                            // Ambil user dari database berdasarkan session user_id
-                            $user = \App\Models\Signup::find(session('user_id'));
-                            $profilePhoto =
-                                $user && $user->photo ? asset('storage/' . $user->photo) : asset('/img/avatar.png');
-                        @endphp
-                        <img src="{{ $profilePhoto }}" alt="Profile" class="profile-photo">
-                    </a>
-                    <span class="username">Hi, {{ session('username') }}</span>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="logout-btn">Logout</button>
-                    </form>
-                </div>
+            <div class="auth-container">
+                <a href="/profile">
+                    @php
+                    // Ambil user dari database berdasarkan session user_id
+                    $user = \App\Models\Signup::find(session('user_id'));
+                    $profilePhoto =
+                    $user && $user->photo ? asset('storage/' . $user->photo) : asset('/img/avatar.png');
+                    @endphp
+                    <img src="{{ $profilePhoto }}" alt="Profile" class="profile-photo">
+                </a>
+                <span class="username">Hi, {{ session('username') }}</span>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+            </div>
             @endif
         </div>
 
@@ -647,7 +647,14 @@
 
     <!-- popular section start -->
     <section id="popularmovie" class="popular-movies">
-        <h2>Popular <span>Movie</span></h2>
+        <h2 style="font-family: Arial, sans-serif; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+            Popular <span>Movie</span>
+            <button style="background-color: #007BFF; border: none; border-radius: 8px; padding: 8px 14px; cursor: pointer; transition: 0.3s; margin-left: 10px;">
+                <a href="librarymovie" style="color: white; text-decoration: none; font-weight: 500; font-size: 14px;">Lihat Semua Movie</a>
+            </button>
+        </h2>
+
+
         <div class="movies-grid">
             <a href="/wolverine" class="movie-link">
                 <div class="movie">
@@ -655,9 +662,9 @@
                     <h3>The Wolverine</h3>
                     <p>Rating: 6.7/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="The Wolverine" data-image="/img/g1.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="The Wolverine" data-image="/img/g1.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -668,10 +675,10 @@
                     <h3>Harry Potter and the Deathly Hallows</h3>
                     <p>Rating: 7.7/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Harry Potter and the Deathly Hallows"
-                            data-image="/img/g2.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Harry Potter and the Deathly Hallows"
+                        data-image="/img/g2.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -682,9 +689,9 @@
                     <h3>Loki</h3>
                     <p>Rating: 8.2/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Loki" data-image="/img/g3.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Loki" data-image="/img/g3.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -695,9 +702,9 @@
                     <h3>Deadpool</h3>
                     <p>Rating: 8/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Deadpool" data-image="/img/g4.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Deadpool" data-image="/img/g4.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -708,9 +715,9 @@
                     <h3>Iron-man</h3>
                     <p>Rating: 7.9/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Iron-man" data-image="/img/g5.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Iron-man" data-image="/img/g5.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -721,9 +728,9 @@
                     <h3>John Wick: Chapter 4</h3>
                     <p>Rating: 7.7/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="John Wick: Chapter 4" data-image="/img/g6.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="John Wick: Chapter 4" data-image="/img/g6.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -734,9 +741,9 @@
                     <h3>World War Z</h3>
                     <p>Rating: 7/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="World War Z" data-image="/img/g7.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="World War Z" data-image="/img/g7.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -747,10 +754,10 @@
                     <h3>Captain America: The First Avenger</h3>
                     <p>Rating: 6.9/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Captain America: The First Avenger"
-                            data-image="/img/g8.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Captain America: The First Avenger"
+                        data-image="/img/g8.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -761,9 +768,9 @@
                     <h3>Bumblebee</h3>
                     <p>Rating: 6.8/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Bumblebee" data-image="/img/g9.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Bumblebee" data-image="/img/g9.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -774,9 +781,9 @@
                     <h3>Doctor Strange</h3>
                     <p>Rating: 7.5/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Doctor Strange" data-image="/img/g13.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Doctor Strange" data-image="/img/g13.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -787,9 +794,9 @@
                     <h3>Spiderman: No Way Home</h3>
                     <p>Rating: 8.5/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Spiderman: No Way Home" data-image="/img/g14.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Spiderman: No Way Home" data-image="/img/g14.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
@@ -800,10 +807,10 @@
                     <h3>Deadpool X Wolverine</h3>
                     <p>Rating: 8/10</p>
                     @if (session('user_id'))
-                        <button class="bookmark-btn" data-title="Deadpool X Wolverine"
-                            data-image="/img/deadpolxwolfren.jpg">
-                            <i class="fas fa-bookmark"></i> Bookmark
-                        </button>
+                    <button class="bookmark-btn" data-title="Deadpool X Wolverine"
+                        data-image="/img/deadpolxwolfren.jpg">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
                     @endif
                 </div>
             </a>
