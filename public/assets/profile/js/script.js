@@ -17,13 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    var photoInput = document.getElementById('photoInput');
-    var profilePhoto = document.getElementById('profilePhotoPreview');
-    if (profilePhoto && photoInput) {
-        profilePhoto.addEventListener('click', function () {
-            photoInput.click();
+    const photoInput = document.getElementById('photoInput');
+    const profilePhotoPreview = document.getElementById('profilePhotoPreview');
+
+    if (photoInput && profilePhotoPreview) {
+        photoInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profilePhotoPreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
         });
     }
 });
