@@ -10,7 +10,6 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
             $table->float('rating_avg')->default(0);
             $table->string('poster')->nullable();
             $table->date('release_date')->nullable();

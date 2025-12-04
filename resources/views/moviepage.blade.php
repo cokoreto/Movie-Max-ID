@@ -823,21 +823,21 @@
         <h2>Upcoming <span>Movie</span></h2>
         <div class="movies-grid">
             <div class="movie">
-                <a href="https://www.imdb.com/title/tt4712810/?ref_=ext_shr_lnk"><img src="/img/g10.png"
+                <a href="https://www.imdb.com/title/tt28650488/?ref_=ext_shr_lnk" target="_blank"><img src="/img/g10.png"
                         alt="Upcoming Movie 1" /></a>
                 <h3>The Super Mario Galaxy Movie</h3>
                 <p>Release Date: April 3, 2026</p>
                 <div class="countdown" data-release-date="2026-04-03"></div>
             </div>
             <div class="movie">
-                <a href="https://www.imdb.com/title/tt26443597/?ref_=ext_shr_lnk"><img src="/img/g11.png"
+                <a href="https://www.imdb.com/title/tt29355505/?ref_=ext_shr_lnk" target="_blank"><img src="/img/g11.png"
                         alt="Upcoming Movie 2" /></a>
                 <h3>Toy Story 5</h3>
                 <p>Release Date: June 19, 2026</p>
                 <div class="countdown" data-release-date="2026-06-19"></div>
             </div>
             <div class="movie">
-                <a href="https://www.imdb.com/title/tt22084616/?ref_=mv_close"><img src="/img/g12.png"
+                <a href="https://www.imdb.com/title/tt22084616/?ref_=ext_shr_lnk" target="_blank"><img src="/img/g12.png"
                         alt="Upcoming Movie 3" /></a>
                 <h3>Spider-Man: Brand New Day</h3>
                 <p>Release Date: July 31, 2026</p>
