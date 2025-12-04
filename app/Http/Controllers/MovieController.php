@@ -15,7 +15,7 @@ class MovieController extends Controller
 
     public function library()
     {
-        $movies = Movie::with('genre')->get();
+        $movies = Movie::with('genre')->orderBy('created_at', 'desc')->get();
         return view('librarymovie.librarymovie', compact('movies'));
     }
 

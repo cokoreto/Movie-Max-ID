@@ -31,6 +31,11 @@ class MovieResource extends Resource
                     ->relationship('genres', 'name')
                     ->multiple()
                     ->required(),
+                Forms\Components\Select::make('actors')
+                    ->label('Actors')
+                    ->relationship('actors', 'name')
+                    ->multiple()
+                    ->required(),
                 Forms\Components\DatePicker::make('release_date')
                     ->label('Release Date')
                     ->required(),
