@@ -5,6 +5,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MovieController;
 
 
 // Tambahan route untuk /home agar tidak 404
@@ -21,9 +22,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/librarymovie', function () {
-    return view('librarymovie/librarymovie');
-});
+Route::get('/librarymovie', [\App\Http\Controllers\MovieController::class, 'library']);
 
 // login authenticate
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
@@ -90,3 +89,5 @@ Route::get('/bumblebee', function () {
 Route::get('/nyan', function () {
     return view('nyan');
 });
+
+Route::get('/movie/{id}', [\App\Http\Controllers\MovieController::class, 'show'])->name('movie.show');

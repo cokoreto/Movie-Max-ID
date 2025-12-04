@@ -12,4 +12,16 @@ class MovieController extends Controller
         $movies = Movie::all();
         return view('home', compact('movies'));
     }
+
+    public function library()
+    {
+        $movies = Movie::with('genre')->get();
+        return view('librarymovie.librarymovie', compact('movies'));
+    }
+
+    public function show($id)
+    {
+        $movie = Movie::with('genre')->findOrFail($id);
+        return view('librarymovie.showmovies', compact('movie'));
+    }
 }

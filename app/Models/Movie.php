@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    protected $fillable = ['title', 'genre_id', 'description', 'poster'];
+    protected $fillable = [
+        'title',
+        'genre_id',
+        'description',
+        'poster',
+        'rating_avg',
+        'release_date',
+        'trailer_url',
+    ];
 
     public function genre()
     {
@@ -21,5 +29,10 @@ class Movie extends Model
     public function favorites()
     {
         return $this->hasMany(Favorite::class);
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class, 'genre_movie');
     }
 }

@@ -25,15 +25,25 @@ class MovieResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')->required()->maxLength(150),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\Textarea::make('description')->required(),
+                Forms\Components\Select::make('genres')
+                    ->label('Genres')
+                    ->relationship('genres', 'name')
+                    ->multiple()
                     ->required(),
-                Forms\Components\Select::make('genre_id')
-                    ->label('Genre')
-                    ->relationship('genre', 'name')
+                Forms\Components\DatePicker::make('release_date')
+                    ->label('Release Date')
                     ->required(),
-                Forms\Components\TextInput::make('release_year')->numeric(),
-                Forms\Components\TextInput::make('rating_avg')->numeric()->disabled(),
+                Forms\Components\TextInput::make('rating_avg')
+                    ->label('Rating')
+                    ->numeric()
+                    ->minValue(0)
+                    ->maxValue(10)
+                    ->suffix('/10'),
                 Forms\Components\TextInput::make('poster')->maxLength(255),
+                Forms\Components\TextInput::make('trailer_url')
+                    ->label('Trailer URL')
+                    ->maxLength(255),
             ]);
     }
 
@@ -43,9 +53,9 @@ class MovieResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('title')->searchable(),
-                Tables\Columns\TextColumn::make('genre.name')->label('Genre'),
-                Tables\Columns\TextColumn::make('release_year'),
-                Tables\Columns\TextColumn::make('rating_avg'),
+                Tables\Columns\TagsColumn::make('genres.name')->label('Genres'),
+                Tables\Columns\TextColumn::make('release_date')->label('Release Date'),
+                Tables\Columns\TextColumn::make('rating_avg')->label('Rating'),
             ])
             ->filters([
                 //

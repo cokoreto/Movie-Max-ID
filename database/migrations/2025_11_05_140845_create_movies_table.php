@@ -13,6 +13,8 @@ return new class extends Migration {
             $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
             $table->float('rating_avg')->default(0);
             $table->string('poster')->nullable();
+            $table->date('release_date')->nullable();
+            $table->string('trailer_url')->nullable();
             $table->timestamps();
         });
     }

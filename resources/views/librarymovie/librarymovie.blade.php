@@ -73,6 +73,7 @@
     <section id="popularmovie" class="popular-movies">
         <h2>Movie<span>Terbaru</span></h2>
         <div class="movies-grid">
+            {{-- Movie manual (yang sudah ada) --}}
             <a href="/wolverine" class="movie-link">
                 <div class="movie">
                     <img src="/img/g1.jpg" alt="Movie 1" />
@@ -231,6 +232,22 @@
                     @endif
                 </div>
             </a>
+
+            {{-- Movie dari database --}}
+            @foreach($movies as $movie)
+            <a href="{{ route('movie.show', $movie->id) }}" class="movie-link">
+                <div class="movie">
+                    <img src="{{ asset($movie->poster) }}" alt="{{ $movie->title }}" />
+                    <h3>{{ $movie->title }}</h3>
+                    <p>Rating: {{ $movie->rating_avg }}/10</p>
+                    @if (session('user_id'))
+                    <button class="bookmark-btn" data-title="{{ $movie->title }}" data-image="{{ asset($movie->poster) }}">
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </button>
+                    @endif
+                </div>
+            </a>
+            @endforeach
         </div>
     </section>
     <!-- popular section end -->
