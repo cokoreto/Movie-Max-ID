@@ -6,6 +6,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ReviewFeedController;
+use App\Http\Controllers\ReviewFeedReplyController;
 
 
 // Tambahan route untuk /home agar tidak 404
@@ -91,3 +93,13 @@ Route::get('/nyan', function () {
 });
 
 Route::get('/movie/{id}', [\App\Http\Controllers\MovieController::class, 'show'])->name('movie.show');
+
+// Review Feed routes
+Route::get('/review-feed', [ReviewFeedController::class, 'index'])->name('review_feed.index');
+Route::post('/review-feed', [ReviewFeedController::class, 'store'])->name('review_feed.store');
+Route::get('/review-feed/{review_feed}/edit', [ReviewFeedController::class, 'edit'])->name('review_feed.edit');
+Route::put('/review-feed/{review_feed}', [ReviewFeedController::class, 'update'])->name('review_feed.update');
+Route::delete('/review-feed/{review_feed}', [ReviewFeedController::class, 'destroy'])->name('review_feed.destroy');
+
+Route::post('/review-feed/reply', [ReviewFeedReplyController::class, 'store'])->name('review_feed.reply.store');
+Route::delete('/review-feed/reply/{reply}', [ReviewFeedReplyController::class, 'destroy'])->name('review_feed.reply.destroy');

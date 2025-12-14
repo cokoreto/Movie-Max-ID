@@ -29,6 +29,7 @@
             <a href="#home" id="homeBtn">Home</a>
             <a href="#popularmovie" id="popularBtn">Popular Movies</a>
             <a href="#upcoming" id="upcomingBtn">Upcoming Movies</a>
+            <a href="/review-feed" id="reviewFeedBtn">Review Feed</a>
         </div>
 
         <!-- search and auth -->
